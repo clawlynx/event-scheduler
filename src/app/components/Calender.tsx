@@ -109,7 +109,7 @@ const Calender = () => {
       <table className="custom-event-editor">
         <tbody className="">
           <tr>
-            <td className="e-textlabel">Title</td>
+            <td className=" text-lg">Title</td>
             <td>
               <input
                 className="e-field e-input"
@@ -121,7 +121,7 @@ const Calender = () => {
             </td>
           </tr>
           <tr>
-            <td className="e-textlabel">Address</td>
+            <td className="e-textlabel text-lg">Address</td>
             <td>
               <input
                 className="e-field e-input"
@@ -133,7 +133,7 @@ const Calender = () => {
             </td>
           </tr>
           <tr>
-            <td className="e-textlabel">Start Time</td>
+            <td className="e-textlabel text-lg">Start Time</td>
             <td>
               <DateTimePickerComponent
                 format="yy/MM/dd hh:mm"
@@ -145,7 +145,7 @@ const Calender = () => {
             </td>
           </tr>
           <tr>
-            <td className="e-textlabel">End Time</td>
+            <td className="e-textlabel text-lg">End Time</td>
             <td>
               <DateTimePickerComponent
                 format="yy/MM/dd hh:mm"

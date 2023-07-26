@@ -61,16 +61,16 @@ export const Form = () => {
     <>
       <button
         onClick={handleClick}
-        className=" p-3 mt-3  bg-slate-900 text-slate-200 rounded-3xl hover:bg-sky-800"
+        className=" p-3 mt-3 animate text-slate-200 rounded-3xl transition ease-in-out delay-150 bg-slate-900 hover:-translate-y-1 hover:scale-110 hover:bg-sky-800 duration-300 ..."
       >
         Add New
       </button>
       <div className="hidden" id="formdiv">
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col text-xl gap-3 border-solid border-2 p-4 my-4 border-slate-900 rounded-lg "
+          className="flex flex-col text-xl gap-3 border-solid border-2 p-6 my-4 border-zinc-800 border-opacity-50 rounded-lg "
         >
-          <div className="p-4">
+          <div className="p-4 flex justify-between">
             <label htmlFor="titleId" className=" pr-3">
               Event Title
             </label>
@@ -79,13 +79,13 @@ export const Form = () => {
               name="title"
               value={formData.title}
               onChange={handleChange}
-              className=" border-zinc-800 border-2 border-opacity-50 px-2 rounded-lg"
+              className=" border-zinc-800 border-2 border-opacity-20 hover:border-opacity-40 hover:border-sky-800 px-2 rounded-lg"
               id="titleId"
               required
             />
           </div>
 
-          <div className="p-4">
+          <div className="p-4 flex justify-between">
             <label htmlFor="addressId" className=" pr-3">
               Address
             </label>
@@ -94,13 +94,13 @@ export const Form = () => {
               name="address"
               value={formData.address}
               onChange={handleChange}
-              className=" border-zinc-800 border-2 border-opacity-50 px-2 rounded-lg"
+              className=" border-zinc-800 border-2 border-opacity-20 hover:border-opacity-40 hover:border-sky-800 px-2 rounded-lg"
               id="addressId"
               required
             />
           </div>
 
-          <div className="p-4">
+          <div className="p-4 flex justify-between">
             <label htmlFor="sdateId" className=" pr-3">
               Start Date
             </label>
@@ -109,13 +109,13 @@ export const Form = () => {
               name="sdate"
               value={formData.sdate}
               onChange={handleChange}
-              className=" border-zinc-800 border-2 border-opacity-50 px-2 rounded-lg"
+              className=" border-zinc-800 border-2 border-opacity-20 hover:border-opacity-40 hover:border-sky-800 px-2 rounded-lg"
               id="titleId"
               required
             />
           </div>
 
-          <div className="p-4">
+          <div className="p-4 flex justify-between">
             <label htmlFor="edateId" className=" pr-3">
               End Date
             </label>
@@ -124,13 +124,13 @@ export const Form = () => {
               name="edate"
               value={formData.edate}
               onChange={handleChange}
-              className=" border-zinc-800 border-2 border-opacity-50 px-2 rounded-lg"
+              className=" border-zinc-800 border-2 border-opacity-20 hover:border-opacity-40 hover:border-sky-800 px-2 rounded-lg"
               id="etitleId"
               required
             />
           </div>
 
-          <div className="p-4">
+          <div className="p-4 flex justify-evenly">
             <label htmlFor="stime" className="pr-3">
               Start Time
             </label>
@@ -139,13 +139,13 @@ export const Form = () => {
               name="startTime"
               value={formData.startTime}
               onChange={handleChange}
-              className=" border-zinc-800 border-2 border-opacity-50 px-2 rounded-lg"
+              className=" border-zinc-800 border-2 border-opacity-20 hover:border-opacity-40 hover:border-sky-800 px-2 rounded-lg"
               id="stime"
               required
             />
           </div>
 
-          <div className="p-4">
+          <div className="p-4 flex justify-evenly">
             <label htmlFor="etime" className="pr-3">
               End Time
             </label>
@@ -154,7 +154,7 @@ export const Form = () => {
               name="endTime"
               value={formData.endTime}
               onChange={handleChange}
-              className=" border-zinc-800 border-2 border-opacity-50 px-2 rounded-lg"
+              className=" border-zinc-800 border-2 border-opacity-20 hover:border-opacity-40 hover:border-sky-800 px-2 rounded-lg"
               id="etime"
               required
             />
@@ -162,7 +162,7 @@ export const Form = () => {
           <input
             type="submit"
             value="Create"
-            className="rounded-full bg-slate-900 text-white hover:bg-sky-800 py-1"
+            className="rounded-full text-white py-1 transition ease-in-out delay-150 bg-slate-900 hover:-translate-y-1 hover:scale-105 hover:bg-sky-800 duration-300 ..."
           />
         </form>
       </div>
