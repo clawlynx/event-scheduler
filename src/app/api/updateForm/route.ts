@@ -11,7 +11,7 @@ type feedback = {
   startTime?: string;
   endTime?: string;
 };
-const filePath = path.join(process.cwd(), "data/formdata.json"); //path of json file
+const filePath = path.join(__dirname, "data/formdata.json"); //path of json file
 
 // post request. gets called when event is added
 export async function POST(request: Request) {
