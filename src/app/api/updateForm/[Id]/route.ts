@@ -14,7 +14,7 @@ type feedback = {
   endTime?: string;
 };
 //file route of the json file
-const filePath = path.join(__dirname, "data/formdata.json");
+const filePath = path.join(process.cwd(), "data/formdata.json");
 export async function DELETE(request: Request) {
   try {
     const Id = request.url.slice(request.url.lastIndexOf("/") + 1);
