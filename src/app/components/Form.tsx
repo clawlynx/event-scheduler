@@ -1,7 +1,10 @@
 "use client";
+
+/*******************************************************************Additional built form  *********************************************/
 import { useState, ChangeEvent, FormEvent } from "react";
 
 export const Form = () => {
+  //state for storing the data from the extra form
   const [formData, setFormData] = useState({
     title: "",
     address: "",
@@ -11,11 +14,13 @@ export const Form = () => {
     endTime: "",
   });
 
+  // function for changing the visibility of form to visible
   function handleClick() {
     const formDiv = document.getElementById("formdiv") as HTMLButtonElement;
     formDiv.classList.remove("hidden");
   }
 
+  //function to update the value of inputs in the form
   function handleChange(e: ChangeEvent<HTMLInputElement>) {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -24,6 +29,7 @@ export const Form = () => {
     }));
   }
 
+  // the function to submit the extra forms data to the json file and update the scheduler
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
@@ -46,6 +52,7 @@ export const Form = () => {
           startTime: "",
           endTime: "",
         });
+        // for making the form hidden after success
         const formDiv = document.getElementById("formdiv") as HTMLButtonElement;
         formDiv.classList.add("hidden");
         window.location.reload();

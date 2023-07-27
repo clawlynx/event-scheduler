@@ -1,3 +1,6 @@
+//----------------------------------------------------page for some functions used in the project----------------------------------------------------------------//
+
+//a function to get correct time format as 00:00
 export function timeCorrector(arg1: number, arg2: number): string {
   if (arg1 < 10 && arg2 < 10) {
     return `0${arg1}:0${arg2}`;
@@ -14,8 +17,9 @@ export function timeCorrector(arg1: number, arg2: number): string {
     return "error";
   }
 }
-
+// a function for the Calender component to handle the various things during add, edit, and delete events
 export async function onActionComplete(e: any) {
+  //what to do when an event is deleted
   if (e.requestType === "eventRemoved") {
     const response = await fetch(`/api/updateForm/${e.data[0].Id}`, {
       method: "DELETE",
@@ -27,10 +31,13 @@ export async function onActionComplete(e: any) {
       console.error("Failed to update JSON file:", response.statusText);
     }
   }
+
+  //what to do when creating an event
   if (e.requestType === "eventCreated") {
     const newData = e.data[0];
 
     const { Id, Subject, Location, StartTime, EndTime } = newData;
+    // variables for sending post request in the expected format
     const id = Id;
     const title = Subject;
     const address = Location;
@@ -68,9 +75,14 @@ export async function onActionComplete(e: any) {
       console.error("Failed to update JSON file:", response.statusText);
     }
   }
+
+  // what to do when an event is edited or dragged or resized
   if (e.requestType === "eventChanged") {
     const newData = e.data[0];
     const { Id, Subject, Location, StartTime, EndTime } = newData;
+
+    //variables for sending put request in the expected format
+
     const id = Id;
     const title = Subject;
     const address = Location;

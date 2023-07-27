@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&family=Dancing+Script&family=Merriweather&family=Montserrat:wght@100;400;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Sigmar&family=Ubuntu&display=swap");
 /*@import "./App.css"; /*:root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -25,6 +25,11 @@
     )
     rgb(var(--background-start-rgb));
 }*/
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
 .animate {
   animation: largeimg 3s ease-in-out infinite;
 }
@@ -35,5 +40,30 @@
   }
   50% {
     transform: scale(1);
+  }
+}
+
+.imageanim {
+  animation: floatimg 5s ease-in-out infinite;
+}
+@keyframes floatimg {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-2rem);
+  }
+}
+.opaqanim {
+  animation: opaq 3s ease-in-out infinite;
+}
+@keyframes opaq {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.25;
   }
 }
