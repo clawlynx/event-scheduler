@@ -41,7 +41,9 @@ const Calender = () => {
 
   // function to fetch data from json file during initial render
   async function fetchData() {
-    const response = await fetch("/api/updateForm");
+    const response = await fetch(
+      "https://event-scheduler-blond.vercel.app/api/updateForm"
+    );
 
     const data: [] = await response.json();
 
